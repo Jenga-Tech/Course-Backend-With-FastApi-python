@@ -309,6 +309,945 @@ This course is arranged in **12 phases**.
 - arithmetic operators
 - output formatting
 
+# Comprehensive Python Tutorial
+
+A practical beginner-to-intermediate guide covering the core foundations of Python programming.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Variables](#variables)
+- [Data Types](#data-types)
+- [Operators](#operators)
+- [Control Flow](#control-flow)
+- [Loops](#loops)
+- [Functions](#functions)
+- [File Handling](#file-handling)
+- [Exceptions](#exceptions)
+- [Object-Oriented Programming](#object-oriented-programming-oop)
+- [Modules and Packages](#modules-and-packages)
+- [Type Hints](#type-hints)
+- [Debugging](#debugging)
+- [Mini Projects](#mini-projects)
+- [Practice Exercises](#practice-exercises)
+- [Best Practices](#best-practices)
+- [Learning Path](#learning-path)
+- [Final Example](#final-example)
+
+---
+
+## Introduction
+
+Python is a high-level programming language known for:
+
+- readability
+- clean syntax
+- flexibility
+- strong community support
+
+Python is widely used for:
+
+- web development
+- backend systems
+- automation
+- data analysis
+- artificial intelligence
+- scripting
+
+A simple Python program:
+
+```python
+print("Hello, world!")
+```
+
+---
+
+## Variables
+
+A variable stores data for later use.
+
+```python
+name = "Jenga"
+age = 20
+height = 1.75
+is_student = True
+```
+
+### Variable Naming Rules
+
+- must start with a letter or underscore
+- cannot start with a number
+- cannot contain spaces
+- should be descriptive
+
+Valid examples:
+
+```python
+first_name = "Ada"
+_total = 100
+score1 = 95
+```
+
+Invalid examples:
+
+```python
+# 2name = "John"
+# first name = "John"
+```
+
+### Reassignment
+
+```python
+x = 10
+x = 15
+print(x)
+```
+
+### Multiple Assignment
+
+```python
+a, b, c = 1, 2, 3
+print(a, b, c)
+```
+
+---
+
+## Data Types
+
+### Integer
+
+```python
+age = 25
+year = 2026
+```
+
+### Float
+
+```python
+price = 19.99
+temperature = 36.5
+```
+
+### String
+
+```python
+name = "Python"
+message = "Welcome"
+```
+
+### Boolean
+
+```python
+is_active = True
+is_logged_in = False
+```
+
+### List
+
+```python
+fruits = ["apple", "banana", "orange"]
+```
+
+### Tuple
+
+```python
+coordinates = (4, 5)
+```
+
+### Set
+
+```python
+colors = {"red", "blue", "green"}
+```
+
+### Dictionary
+
+```python
+student = {
+    "name": "David",
+    "age": 17,
+    "grade": "A"
+}
+```
+
+### Checking Data Types
+
+```python
+x = 10
+print(type(x))
+```
+
+---
+
+## Operators
+
+### Arithmetic Operators
+
+```python
+a = 10
+b = 3
+
+print(a + b)   # 13
+print(a - b)   # 7
+print(a * b)   # 30
+print(a / b)   # 3.333...
+print(a // b)  # 3
+print(a % b)   # 1
+print(a ** b)  # 1000
+```
+
+### Comparison Operators
+
+```python
+print(5 == 5)   # True
+print(5 != 3)   # True
+print(7 > 2)    # True
+print(4 < 1)    # False
+print(6 >= 6)   # True
+print(3 <= 5)   # True
+```
+
+### Logical Operators
+
+```python
+x = True
+y = False
+
+print(x and y)  # False
+print(x or y)   # True
+print(not x)    # False
+```
+
+### Assignment Operators
+
+```python
+x = 5
+x += 2
+print(x)
+
+x *= 3
+print(x)
+```
+
+### Membership Operators
+
+```python
+fruits = ["apple", "banana", "orange"]
+print("apple" in fruits)
+print("grape" not in fruits)
+```
+
+---
+
+## Control Flow
+
+Python uses `if`, `elif`, and `else` to make decisions.
+
+```python
+age = 18
+
+if age < 13:
+    print("Child")
+elif age < 18:
+    print("Teenager")
+else:
+    print("Adult")
+```
+
+### Example: Even or Odd
+
+```python
+number = 7
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+### Nested Condition
+
+```python
+score = 85
+
+if score >= 50:
+    if score >= 80:
+        print("Pass with distinction")
+    else:
+        print("Pass")
+else:
+    print("Fail")
+```
+
+---
+
+## Loops
+
+### `for` Loop
+
+```python
+for i in range(5):
+    print(i)
+```
+
+### Loop Through a List
+
+```python
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+### `while` Loop
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+### `break`
+
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+### `continue`
+
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+```
+
+### `pass`
+
+```python
+for i in range(3):
+    pass
+```
+
+---
+
+## Functions
+
+Functions are reusable blocks of code.
+
+### Basic Function
+
+```python
+def greet():
+    print("Hello!")
+```
+
+### Function with Parameters
+
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
+
+### Function with Return Value
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(4, 6)
+print(result)
+```
+
+### Default Parameters
+
+```python
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+```
+
+### Keyword Arguments
+
+```python
+def introduce(name, age):
+    print(f"My name is {name} and I am {age} years old.")
+
+introduce(age=20, name="Grace")
+```
+
+### Variable-Length Arguments
+
+```python
+def total(*numbers):
+    return sum(numbers)
+
+print(total(1, 2, 3, 4))
+```
+
+### Scope
+
+```python
+x = 10
+
+def show():
+    x = 5
+    print(x)
+
+show()
+print(x)
+```
+
+---
+
+## File Handling
+
+Python can read from and write to files.
+
+### Reading a File
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+file.close()
+```
+
+### Writing to a File
+
+```python
+file = open("example.txt", "w")
+file.write("Hello from Python!")
+file.close()
+```
+
+### Appending to a File
+
+```python
+file = open("example.txt", "a")
+file.write("\nNew line added.")
+file.close()
+```
+
+### Best Practice: `with open(...)`
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+```
+
+### Reading Line by Line
+
+```python
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+```
+
+---
+
+## Exceptions
+
+Exceptions help manage runtime errors safely.
+
+### Basic Example
+
+```python
+try:
+    x = int(input("Enter a number: "))
+    print(10 / x)
+except:
+    print("An error occurred.")
+```
+
+### Better Exception Handling
+
+```python
+try:
+    x = int(input("Enter a number: "))
+    print(10 / x)
+except ValueError:
+    print("Please enter a valid integer.")
+except ZeroDivisionError:
+    print("You cannot divide by zero.")
+```
+
+### `else` and `finally`
+
+```python
+try:
+    num = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input.")
+else:
+    print("You entered:", num)
+finally:
+    print("Program finished.")
+```
+
+### Raising Exceptions
+
+```python
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Denominator cannot be zero.")
+    return a / b
+```
+
+---
+
+## Object-Oriented Programming (OOP)
+
+OOP structures code using classes and objects.
+
+### Class and Object
+
+```python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"My name is {self.name} and I am {self.age} years old.")
+```
+
+```python
+student1 = Student("Ada", 17)
+student1.introduce()
+```
+
+### Another Example
+
+```python
+class Car:
+    def __init__(self, brand, year):
+        self.brand = brand
+        self.year = year
+```
+
+### Methods
+
+```python
+class Calculator:
+    def add(self, a, b):
+        return a + b
+```
+
+### Inheritance
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+```
+
+### Encapsulation
+
+```python
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+        else:
+            print("Insufficient funds")
+```
+
+### Polymorphism
+
+```python
+class Bird:
+    def sound(self):
+        print("Bird chirps")
+
+class Cat:
+    def sound(self):
+        print("Cat meows")
+
+for animal in [Bird(), Cat()]:
+    animal.sound()
+```
+
+---
+
+## Modules and Packages
+
+A module is a Python file. A package is a folder containing modules.
+
+### Importing a Built-In Module
+
+```python
+import math
+
+print(math.sqrt(16))
+print(math.pi)
+```
+
+### Importing Specific Items
+
+```python
+from math import sqrt, pi
+
+print(sqrt(25))
+print(pi)
+```
+
+### Creating Your Own Module
+
+`mymath.py`
+
+```python
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+```
+
+Another file:
+
+```python
+import mymath
+
+print(mymath.add(2, 3))
+```
+
+### Package Structure
+
+```text
+myproject/
+    main.py
+    utilities/
+        __init__.py
+        helper.py
+```
+
+`helper.py`
+
+```python
+def greet(name):
+    return f"Hello, {name}"
+```
+
+`main.py`
+
+```python
+from utilities.helper import greet
+
+print(greet("Jenga"))
+```
+
+---
+
+## Type Hints
+
+Type hints improve code readability and tooling support.
+
+### Basic Hints
+
+```python
+name: str = "Alice"
+age: int = 20
+price: float = 19.99
+is_active: bool = True
+```
+
+### Function Type Hints
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+### List Type Hints
+
+```python
+def total_scores(scores: list[int]) -> int:
+    return sum(scores)
+```
+
+### Dictionary Type Hints
+
+```python
+def get_student() -> dict[str, str]:
+    return {"name": "John", "grade": "A"}
+```
+
+### Optional Values
+
+```python
+from typing import Optional
+
+def find_name(user_id: int) -> Optional[str]:
+    if user_id == 1:
+        return "Alice"
+    return None
+```
+
+---
+
+## Debugging
+
+Debugging is the process of finding and fixing problems in code.
+
+### Use `print()`
+
+```python
+x = 5
+y = 0
+print("x =", x)
+print("y =", y)
+print(x / y)
+```
+
+### Read Error Messages Carefully
+
+Example:
+
+```python
+ZeroDivisionError: division by zero
+```
+
+### Check Logic
+
+```python
+age = 18
+
+if age > 18:
+    print("Adult")
+```
+
+Maybe you intended:
+
+```python
+if age >= 18:
+    print("Adult")
+```
+
+### Use a Debugger
+
+Editors like VS Code let you:
+
+- pause execution
+- inspect variables
+- step through code
+
+---
+
+## Mini Projects
+
+### 1. Simple Calculator
+
+```python
+def calculator():
+    print("Simple Calculator")
+    num1 = float(input("Enter first number: "))
+    op = input("Enter operator (+, -, *, /): ")
+    num2 = float(input("Enter second number: "))
+
+    if op == "+":
+        print("Result:", num1 + num2)
+    elif op == "-":
+        print("Result:", num1 - num2)
+    elif op == "*":
+        print("Result:", num1 * num2)
+    elif op == "/":
+        if num2 != 0:
+            print("Result:", num1 / num2)
+        else:
+            print("Cannot divide by zero")
+    else:
+        print("Invalid operator")
+
+calculator()
+```
+
+### 2. Student Record with File Handling
+
+```python
+def save_student():
+    name = input("Enter student name: ")
+    score = input("Enter score: ")
+
+    with open("students.txt", "a") as file:
+        file.write(f"{name},{score}\n")
+
+    print("Record saved.")
+
+save_student()
+```
+
+### 3. OOP Bank Account
+
+```python
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited {amount}. New balance: {self.balance}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds")
+        else:
+            self.balance -= amount
+            print(f"Withdrew {amount}. New balance: {self.balance}")
+
+account = BankAccount("Jenga", 1000)
+account.deposit(500)
+account.withdraw(300)
+```
+
+---
+
+## Practice Exercises
+
+### Variables and Data Types
+1. Create variables for your name, age, and favorite color.
+2. Print their values and data types.
+
+### Operators
+3. Write a program to calculate the area of a rectangle.
+4. Write a program to check if a number is divisible by 5.
+
+### Control Flow
+5. Write a program that checks whether a number is positive, negative, or zero.
+6. Write a grading system:
+   - 70 and above = A
+   - 60–69 = B
+   - 50–59 = C
+   - below 50 = F
+
+### Loops
+7. Print numbers from 1 to 20.
+8. Print only even numbers from 1 to 20.
+9. Find the sum of numbers from 1 to 100.
+
+### Functions
+10. Write a function that returns the square of a number.
+11. Write a function that checks whether a word is a palindrome.
+
+### File Handling
+12. Write a program that creates a file and stores three names in it.
+13. Read the file and print each name.
+
+### Exceptions
+14. Ask the user for two numbers and handle invalid input safely.
+15. Handle division by zero.
+
+### OOP
+16. Create a `Book` class with title and author.
+17. Add a method to display the book details.
+
+### Modules and Packages
+18. Create a module with two functions and import it into another file.
+
+### Type Hints
+19. Add type hints to three functions you wrote earlier.
+
+### Debugging
+20. Intentionally create a program with an error and fix it using print statements.
+
+---
+
+## Best Practices
+
+- use meaningful variable names
+- keep functions small and focused
+- avoid repeating code
+- handle exceptions carefully
+- test your code often
+- organize files properly
+- use type hints as your projects grow
+
+---
+
+## Learning Path
+
+A strong Python progression looks like this:
+
+1. syntax and output
+2. variables and data types
+3. operators
+4. control flow
+5. loops
+6. functions
+7. collections
+8. file handling
+9. exceptions
+10. OOP
+11. modules and packages
+12. type hints
+13. debugging and testing
+
+---
+
+## Final Example
+
+This example combines functions, file handling, exceptions, and type hints.
+
+```python
+def save_result(name: str, score: int) -> None:
+    with open("results.txt", "a") as file:
+        file.write(f"{name}: {score}\n")
+
+def get_grade(score: int) -> str:
+    if score >= 70:
+        return "A"
+    elif score >= 60:
+        return "B"
+    elif score >= 50:
+        return "C"
+    else:
+        return "F"
+
+def main() -> None:
+    try:
+        name = input("Enter student name: ")
+        score = int(input("Enter student score: "))
+        grade = get_grade(score)
+        print(f"{name} scored grade {grade}")
+        save_result(name, score)
+    except ValueError:
+        print("Please enter a valid numeric score.")
+
+main()
+```
+
+---
+
+## Conclusion
+
+Python becomes easier when you practice each topic with small, real examples.
+
+Focus on:
+
+- understanding the logic
+- writing clean code
+- testing frequently
+- building small projects consistently
+
+That is how you move from beginner level to confident Python programmer.
+
+
 ### Mini Projects
 - student bio app
 - receipt generator

@@ -3412,6 +3412,249 @@ Areas that can be expanded:
 - deployment walkthroughs
 
 ---
+# 📍 5. Routes and Endpoints
+
+🔹 What Are Routes?
+
+A route is a URL path used to access your backend.
+```
+@app.get("/")
+def home():
+    return {"message": "Welcome"}
+```
+👉 / is the route
+```
+@app.get("/students")
+def get_students():
+    return {"students": ["Ada", "John"]}
+```
+👉 /students is the route
+🔹 What Are Endpoints?
+
+An endpoint = Route + HTTP method + function
+```
+@app.get("/students")
+def get_students():
+    return {"message": "List of students"}
+```
+| Part     | Value            |
+| -------- | ---------------- |
+| Route    | `/students`      |
+| Method   | GET              |
+| Function | `get_students()` |
+
+🔹 GET Request (Read Data)
+
+Used to fetch data
+```
+@app.get("/students")
+def get_students():
+    return [
+        {"id": 1, "name": "Ada"},
+        {"id": 2, "name": "John"}
+    ]
+```
+🔹 POST Request (Create Data)
+
+Used to add new data
+```
+from pydantic import BaseModel
+
+class Student(BaseModel):
+    name: str
+    age: int
+    course: str
+
+students = []
+
+@app.post("/students")
+def create_student(student: Student):
+    students.append(student)
+    return {"message": "Student created", "student": student}
+```
+Example JSON Body
+```
+{
+  "name": "Ada",
+  "age": 18,
+  "course": "Software Engineering"
+}
+```
+🔹 PUT Request (Update Full Data)
+
+Replaces the entire record
+```
+@app.put("/students/{student_id}")
+def update_student(student_id: int, student: Student):
+    return {"id": student_id, **student.dict()}
+ ```   
+🔹 PATCH Request (Update Partial Data)
+
+Updates only selected fields
+```
+from typing import Optional
+
+class StudentUpdate(BaseModel):
+    name: Optional[str] = None
+    age: Optional[int] = None
+
+@app.patch("/students/{student_id}")
+def patch_student(student_id: int, student: StudentUpdate):
+    return {"id": student_id, "updated_data": student}
+```
+    
+🔹 DELETE Request (Remove Data)
+```
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    return {"message": f"Student {student_id} deleted"}
+```
+🔹 Route Parameters
+
+Passed inside the URL
+```
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    return {"student_id": student_id}
+```
+
+Example
+/students/5
+🔹 Query Parameters
+
+Passed using ?
+```
+@app.get("/search")
+def search(name: str):
+    return {"search": name}
+
+```
+Example
+/search?name=Ada
+🔹 Multiple Query Parameters
+```
+@app.get("/filter")
+def filter_students(course: str, age: int):
+    return {"course": course, "age": age}
+```  
+/filter?course=Python&age=18
+🧪 Full Practice Example
+```
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
+
+app = FastAPI()
+students = []
+
+class Student(BaseModel):
+    name: str
+    age: int
+    course: str
+
+class StudentUpdate(BaseModel):
+    name: Optional[str] = None
+    age: Optional[int] = None
+    course: Optional[str] = None
+
+@app.get("/")
+def home():
+    return {"message": "API Running"}
+
+@app.post("/students")
+def create_student(student: Student):
+    new_student = {"id": len(students)+1, **student.dict()}
+    students.append(new_student)
+    return new_student
+
+@app.get("/students")
+def get_students():
+    return students
+
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    for s in students:
+        if s["id"] == student_id:
+            return s
+    raise HTTPException(status_code=404, detail="Not found")
+
+@app.patch("/students/{student_id}")
+def update_student(student_id: int, data: StudentUpdate):
+    for s in students:
+        if s["id"] == student_id:
+            if data.name: s["name"] = data.name
+            if data.age: s["age"] = data.age
+            if data.course: s["course"] = data.course
+            return s
+    raise HTTPException(status_code=404, detail="Not found")
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    for s in students:
+        if s["id"] == student_id:
+            students.remove(s)
+            return {"message": "Deleted"}
+    raise HTTPException(status_code=404, detail="Not found")
+```
+
+📝 Exercises
+✅ Exercise 1: Book API
+
+Create:
+
+GET /books
+GET /books/{id}
+POST /books
+PUT /books/{id}
+PATCH /books/{id}
+DELETE /books/{id}
+
+Fields:
+
+title, author, year, price
+
+✅ Exercise 2: Course API
+GET /courses
+POST /courses
+GET /courses/{id}
+PUT /courses/{id}
+DELETE /courses/{id}
+
+
+🔍 Exercise 3: Search Feature
+GET /courses/search?title=Python
+🚀 Mini Projects
+Project 1: Student API
+Create students
+View all
+View one
+Update
+Delete
+Search
+Project 2: Book Library API
+Add books
+View books
+Search by author
+Project 3: Product Inventory API
+
+Fields:
+
+name, category, price, quantity
+Project 4: Course Registration API
+
+Add courses
+Register students
+Search by duration
+🧠 Learning Flow
+
+GET → Route Params → Query Params → POST → PUT → PATCH → DELETE
+
+
+
+---
+
+
+---
 
 # License
 

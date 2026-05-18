@@ -3026,6 +3026,1617 @@ A learner should be able to explain:
 - SQLAlchemy ORM
 - sessions
 - migrations awareness
+---
+# Supabase Mastery Tutorial (2026 Edition)
+## From Beginner to Advanced — Project-Based Learning Roadmap
+
+---
+
+# What You Will Learn
+
+By the end of this roadmap, you will know how to build:
+
+- Authentication systems
+- SaaS backends
+- Ecommerce systems
+- AI applications
+- Booking platforms
+- Real-time apps
+- Admin dashboards
+- File storage systems
+- Role-based access systems
+- APIs with Supabase
+- Next.js + Supabase fullstack apps
+- Production-ready PostgreSQL systems
+
+---
+
+# What is Supabase?
+
+Supabase is an open-source backend platform built on:
+
+```txt
+PostgreSQL
+```
+
+It provides:
+
+- Database
+- Authentication
+- File storage
+- APIs
+- Realtime
+- Edge functions
+- Row-level security
+- AI/vector support
+
+Think of it as:
+
+```txt
+Firebase for SQL developers
+```
+
+But more powerful for scalable SaaS systems.
+
+---
+
+# REQUIRED SKILLS BEFORE STARTING
+
+You should know:
+
+- Basic HTML/CSS
+- Basic JavaScript
+- Basic React or Next.js
+
+Not mandatory, but helpful.
+
+---
+
+# TECHNOLOGIES YOU WILL USE
+
+## Frontend
+
+- Next.js
+- TypeScript
+- TailwindCSS
+
+## Backend
+
+- Supabase
+- PostgreSQL
+
+## Tools
+
+- VS Code
+- GitHub
+- Chrome DevTools
+
+---
+
+# PHASE 1 — SUPABASE FUNDAMENTALS
+
+## Goal
+
+Understand the platform and database basics.
+
+---
+
+# LESSON 1 — What is PostgreSQL?
+
+Learn:
+
+- Tables
+- Rows
+- Columns
+- Primary keys
+- Foreign keys
+- Relationships
+
+Example:
+
+Users table:
+
+| id | name | email |
+|----|------|------|
+| 1 | John | john@gmail.com |
+
+Orders table:
+
+| id | user_id | amount |
+|----|---------|--------|
+| 1 | 1 | 500 |
+
+Relationship:
+
+```txt
+users.id → orders.user_id
+```
+
+---
+
+# MINI PROJECT 1 — Student Management Database
+
+Build:
+
+```txt
+Student Management Database
+```
+
+Tables:
+
+- students
+- courses
+- enrollments
+
+Learn:
+
+- table creation
+- relationships
+- inserting data
+- querying data
+
+---
+
+# LESSON 2 — Creating Supabase Account
+
+Go to:
+
+https://supabase.com
+
+Create:
+
+- organization
+- new project
+
+Learn:
+
+- project settings
+- database password
+- API keys
+- dashboard overview
+
+---
+
+# LESSON 3 — Understanding Supabase Dashboard
+
+Explore:
+
+- Table Editor
+- SQL Editor
+- Authentication
+- Storage
+- Edge Functions
+- Logs
+- Policies
+
+---
+
+# PHASE 2 — DATABASE MASTERY
+
+## Goal
+
+Become strong in PostgreSQL using Supabase.
+
+---
+
+# LESSON 4 — SQL Basics
+
+Learn:
+
+```sql
+SELECT
+INSERT
+UPDATE
+DELETE
+WHERE
+ORDER BY
+LIMIT
+```
+
+---
+
+# MINI PROJECT 2 — Student Result System
+
+Build:
+
+- students table
+- subjects table
+- scores table
+
+Features:
+
+- add scores
+- calculate average
+- rank students
+
+---
+
+# LESSON 5 — Relationships
+
+Learn:
+
+- One-to-One
+- One-to-Many
+- Many-to-Many
+
+---
+
+# LESSON 6 — Advanced SQL
+
+Learn:
+
+- joins
+- aggregations
+- group by
+- nested queries
+- indexes
+
+---
+
+# MINI PROJECT 3 — Ecommerce Database
+
+Create:
+
+- users
+- products
+- orders
+- order_items
+- payments
+
+Learn:
+
+- real SaaS database design
+
+---
+
+# PHASE 3 — SUPABASE AUTHENTICATION
+
+## Goal
+
+Master user authentication.
+
+---
+
+# LESSON 7 — Authentication Basics
+
+Learn:
+
+- signup
+- login
+- logout
+- sessions
+- JWT
+
+---
+
+# MINI PROJECT 4 — Full Authentication App
+
+Build:
+
+- signup page
+- login page
+- forgot password
+- protected dashboard
+
+Using:
+
+```txt
+Next.js + Supabase Auth
+```
+
+---
+
+# LESSON 8 — OAuth Login
+
+Implement:
+
+- Google login
+- GitHub login
+
+---
+
+# LESSON 9 — User Profiles
+
+Create:
+
+```txt
+profiles table
+```
+
+Store:
+
+- avatar
+- bio
+- role
+- username
+
+---
+
+# PHASE 4 — REALTIME SYSTEMS
+
+## Goal
+
+Build live systems.
+
+---
+
+# LESSON 10 — Realtime Features
+
+Learn:
+
+- subscriptions
+- live updates
+- realtime database
+
+---
+
+# MINI PROJECT 5 — Live Chat Application
+
+Build:
+
+- realtime messages
+- online users
+- typing indicators
+
+---
+
+# PHASE 5 — STORAGE SYSTEMS
+
+## Goal
+
+Handle images and files.
+
+---
+
+# LESSON 11 — Supabase Storage
+
+Learn:
+
+- buckets
+- uploads
+- permissions
+- signed URLs
+
+---
+
+# MINI PROJECT 6 — File Upload Platform
+
+Features:
+
+- upload profile images
+- upload PDFs
+- secure downloads
+
+---
+
+# PHASE 6 — ROW LEVEL SECURITY (VERY IMPORTANT)
+
+## Goal
+
+Build secure apps.
+
+---
+
+# LESSON 12 — RLS Policies
+
+Learn:
+
+- authentication rules
+- authorization
+- ownership checks
+
+Example:
+
+```sql
+Users can only see their own orders
+```
+
+---
+
+# MINI PROJECT 7 — Multi-User SaaS Security
+
+Build:
+
+- user roles
+- admin dashboard
+- permissions
+
+Roles:
+
+- admin
+- customer
+- instructor
+
+---
+
+# PHASE 7 — NEXT.JS + SUPABASE FULLSTACK
+
+## Goal
+
+Build modern production apps.
+
+---
+
+# LESSON 13 — Connecting Next.js
+
+Install:
+
+```bash
+npm install @supabase/supabase-js
+```
+
+Create:
+
+```txt
+lib/supabase.ts
+```
+
+---
+
+# LESSON 14 — Server Components
+
+Learn:
+
+- SSR
+- server actions
+- cookies
+- secure sessions
+
+---
+
+# MINI PROJECT 8 — Booking Platform
+
+Build:
+
+- spa booking system
+- calendar
+- appointments
+- payments
+
+---
+
+# PHASE 8 — ECOMMERCE SYSTEMS
+
+## Goal
+
+Build complete online stores.
+
+---
+
+# MINI PROJECT 9 — Full Ecommerce Website
+
+Build:
+
+- products
+- cart
+- checkout
+- invoices
+- order tracking
+
+Use:
+
+- Paystack
+- Flutterwave
+
+Store everything in Supabase.
+
+---
+
+# PHASE 9 — ADMIN DASHBOARDS
+
+## Goal
+
+Build SaaS management systems.
+
+---
+
+# MINI PROJECT 10 — SaaS Admin Dashboard
+
+Features:
+
+- analytics
+- charts
+- customers
+- revenue
+- permissions
+- settings
+
+---
+
+# PHASE 10 — EDGE FUNCTIONS
+
+## Goal
+
+Run backend logic.
+
+---
+
+# LESSON 15 — Edge Functions
+
+Learn:
+
+- serverless APIs
+- secure backend code
+- webhook handling
+
+---
+
+# MINI PROJECT 11 — Payment Verification API
+
+Build:
+
+- Paystack verification
+- invoice creation
+- WhatsApp redirects
+
+---
+
+# PHASE 11 — AI + VECTOR DATABASES
+
+## Goal
+
+Use Supabase for AI apps.
+
+---
+
+# LESSON 16 — pgvector
+
+Learn:
+
+- embeddings
+- semantic search
+- AI memory
+
+---
+
+# MINI PROJECT 12 — AI Knowledge Base
+
+Build:
+
+- upload documents
+- AI chatbot
+- semantic search
+
+---
+
+# PHASE 12 — PRODUCTION DEPLOYMENT
+
+## Goal
+
+Deploy real apps.
+
+---
+
+# LESSON 17 — Deploying Apps
+
+Deploy:
+
+## Frontend
+
+- Vercel
+
+## Backend
+
+- Supabase
+
+Custom domains:
+
+```txt
+app.yourdomain.com
+```
+
+---
+
+# LESSON 18 — Environment Variables
+
+Learn:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+---
+
+# LESSON 19 — Backups and Scaling
+
+Learn:
+
+- backups
+- scaling
+- optimization
+- indexing
+- performance tuning
+
+---
+
+# FINAL MASTERY PROJECTS
+
+---
+
+# PROJECT 1 — Tonatel Ecommerce + Spa System
+
+Build:
+
+- ecommerce
+- booking
+- academy
+- WhatsApp checkout
+
+---
+
+# PROJECT 2 — WapBiz SaaS
+
+Build:
+
+- multi-business architecture
+- subscriptions
+- messaging
+- analytics
+
+---
+
+# PROJECT 3 — SiteOrbit SaaS
+
+Build:
+
+- organizations
+- projects
+- teams
+- analytics
+
+---
+
+# PROJECT 4 — AI Automation Platform
+
+Build:
+
+- AI agents
+- workflows
+- file uploads
+- AI search
+
+---
+
+# BEST WAY TO LEARN FAST
+
+# DAILY LEARNING PLAN
+
+| Time | Activity |
+|------|----------|
+| 1 Hour | Watch/Tutorial |
+| 2 Hours | Build |
+| 1 Hour | Break/Fix Errors |
+| 1 Hour | Improve UI |
+
+---
+
+# LEARNING STRATEGY
+
+## DO NOT
+
+- only watch videos
+- memorize code
+
+## DO
+
+- build projects
+- break things
+- fix errors
+- deploy apps
+
+---
+
+# BEST YOUTUBE CHANNELS (2026)
+
+Search for:
+
+- Supabase Official
+- Code with Antonio
+- Web Prodigies
+- JavaScript Mastery
+- Theo
+- Fireship
+
+---
+
+# BEST DOCUMENTATION
+
+Official Docs:
+
+https://supabase.com/docs
+
+---
+
+# HOW LONG TO MASTER?
+
+| Level | Time |
+|------|------|
+| Beginner | 1 week |
+| Intermediate | 1 month |
+| Advanced | 3 months |
+| Production Mastery | 6–12 months |
+
+---
+
+# FINAL ADVICE
+
+The fastest route for you is:
+
+```txt
+Next.js + Supabase + Tailwind + TypeScript
+```
+
+Build real projects continuously.
+
+That combination is currently one of the strongest fullstack stacks for:
+
+- SaaS
+- AI
+- Ecommerce
+- Booking systems
+- Dashboards
+- Automation platforms
+- Startup products
+
+in 2026.
+---
+# Backend Schema & Architecture Tutorial (2026 Edition)
+
+## Complete Guide to Structuring Modern Backends Properly
+
+---
+
+# What You Will Learn
+
+This tutorial teaches you:
+
+- How to structure backend systems professionally
+- How database schema works
+- How to design scalable SaaS databases
+- Best backend tools in 2026
+- Authentication architecture
+- API architecture
+- Payment architecture
+- File storage architecture
+- Real-world backend design patterns
+
+This is the exact approach used in:
+
+- SaaS apps
+- Ecommerce systems
+- AI platforms
+- Booking systems
+- ERP systems
+- Multi-tenant applications
+
+---
+
+# PART 1 — UNDERSTANDING BACKEND ARCHITECTURE
+
+---
+
+# What is Backend?
+
+Backend is the system behind the frontend.
+
+Example:
+
+Frontend:
+
+```txt
+User clicks "Buy Product"
+```
+
+Backend:
+
+```txt
+- verifies user
+- checks product
+- creates order
+- processes payment
+- stores data
+- generates invoice
+```
+
+---
+
+# BACKEND FLOW
+
+```txt
+Frontend → API → Backend Logic → Database
+```
+
+Example:
+
+```txt
+Next.js → FastAPI → PostgreSQL
+```
+
+---
+
+# MODERN BACKEND STACK (2026)
+
+## Recommended Stack
+
+| Layer | Recommended Tool |
+|---|---|
+| Frontend | Next.js |
+| Backend API | FastAPI |
+| Database | PostgreSQL |
+| Managed DB | Supabase |
+| ORM | SQLAlchemy |
+| Validation | Pydantic |
+| Auth | JWT |
+| Payments | Paystack / Stripe |
+| File Storage | Supabase Storage |
+| Queue Jobs | Celery + Redis |
+| Deployment | Railway / Render / VPS |
+| Monitoring | Sentry |
+| Realtime | Supabase Realtime |
+
+---
+
+# WHY THIS STACK IS POWERFUL
+
+Because it is:
+
+- scalable
+- production-ready
+- startup-grade
+- enterprise-compatible
+- AI-ready
+- API-friendly
+
+---
+
+# PART 2 — UNDERSTANDING DATABASE SCHEMA
+
+---
+
+# What is Database Schema?
+
+Schema is the structure of your database.
+
+Example:
+
+```txt
+Users
+Orders
+Products
+Payments
+```
+
+How they relate together is called:
+
+```txt
+Database Schema
+```
+
+---
+
+# SIMPLE DATABASE EXAMPLE
+
+## Users Table
+
+| id | name | email |
+|---|---|---|
+| 1 | John | john@gmail.com |
+
+---
+
+## Products Table
+
+| id | title | price |
+|---|---|---|
+| 1 | Face Cream | 5000 |
+
+---
+
+## Orders Table
+
+| id | user_id | total |
+|---|---|---|
+| 1 | 1 | 5000 |
+
+---
+
+# Relationship
+
+```txt
+users.id → orders.user_id
+```
+
+---
+
+# TYPES OF RELATIONSHIPS
+
+---
+
+# 1. One-to-One
+
+Example:
+
+```txt
+User → Profile
+```
+
+One user has one profile.
+
+---
+
+# 2. One-to-Many
+
+Example:
+
+```txt
+User → Orders
+```
+
+One user can have many orders.
+
+---
+
+# 3. Many-to-Many
+
+Example:
+
+```txt
+Students ↔ Courses
+```
+
+Many students can enroll in many courses.
+
+---
+
+# PART 3 — HOW TO DESIGN A PROFESSIONAL SCHEMA
+
+---
+
+# STEP 1 — Identify Main Entities
+
+Example ecommerce app:
+
+Entities:
+
+```txt
+Users
+Products
+Orders
+Payments
+Categories
+Reviews
+```
+
+---
+
+# STEP 2 — Define Relationships
+
+Example:
+
+```txt
+Users → Orders
+Orders → Products
+Products → Categories
+```
+
+---
+
+# STEP 3 — Normalize Data
+
+DO NOT repeat data unnecessarily.
+
+## BAD
+
+```txt
+Order stores product title repeatedly
+```
+
+## GOOD
+
+```txt
+Order references product_id
+```
+
+---
+
+# STEP 4 — Add Timestamps
+
+Always include:
+
+```sql
+created_at
+updated_at
+```
+
+---
+
+# STEP 5 — Add IDs
+
+Always use:
+
+```sql
+UUID
+```
+
+instead of auto increment when possible.
+
+Better for:
+
+- scaling
+- security
+- distributed systems
+
+---
+
+# PART 4 — BEST DATABASE STRUCTURE
+
+---
+
+# Recommended Folder Structure
+
+```txt
+backend/
+├── app/
+│   ├── api/
+│   ├── core/
+│   ├── db/
+│   ├── models/
+│   ├── schemas/
+│   ├── services/
+│   ├── repositories/
+│   ├── auth/
+│   ├── utils/
+│   └── main.py
+```
+
+---
+
+# WHAT EACH FOLDER DOES
+
+---
+
+# api/
+
+Contains routes/endpoints.
+
+Example:
+
+```txt
+POST /login
+GET /products
+```
+
+---
+
+# models/
+
+Contains database tables.
+
+Example:
+
+```python
+class User(Base):
+```
+
+---
+
+# schemas/
+
+Contains request/response validation.
+
+Using:
+
+```txt
+Pydantic
+```
+
+---
+
+# services/
+
+Contains business logic.
+
+Example:
+
+```txt
+payment processing
+invoice generation
+```
+
+---
+
+# repositories/
+
+Handles database queries.
+
+Keeps code clean.
+
+---
+
+# auth/
+
+Authentication system.
+
+JWT handling.
+
+---
+
+# core/
+
+App configuration.
+
+Example:
+
+```txt
+settings.py
+security.py
+```
+
+---
+
+# PART 5 — SETTING UP POSTGRESQL + SUPABASE
+
+---
+
+# STEP 1 — Create Supabase Project
+
+Go to:
+
+https://supabase.com
+
+Create:
+
+- organization
+- project
+
+Save:
+
+```env
+DATABASE_URL
+ANON_KEY
+SERVICE_ROLE_KEY
+```
+
+---
+
+# STEP 2 — Setup PostgreSQL Connection
+
+Install:
+
+```bash
+pip install sqlalchemy psycopg[binary]
+```
+
+---
+
+# STEP 3 — Create Database Config
+
+Example:
+
+```python
+from sqlalchemy import create_engine
+
+engine = create_engine(DATABASE_URL)
+```
+
+---
+
+# PART 6 — BEST AUTHENTICATION SYSTEM
+
+---
+
+# Recommended Auth Stack
+
+| Tool | Purpose |
+|---|---|
+| JWT | Authentication |
+| Refresh Tokens | Persistent login |
+| bcrypt/passlib | Password hashing |
+| OAuth | Google/GitHub login |
+
+---
+
+# LOGIN FLOW
+
+```txt
+User Login
+→ Verify Password
+→ Generate JWT
+→ Return Access Token
+```
+
+---
+
+# BEST PRACTICE
+
+DO NOT store passwords directly.
+
+Always hash:
+
+```python
+hashed_password
+```
+
+---
+
+# PART 7 — PAYMENT ARCHITECTURE
+
+---
+
+# Recommended Flow
+
+```txt
+Frontend
+→ Backend creates payment
+→ User pays
+→ Paystack webhook verifies
+→ Database updates
+→ Invoice generated
+```
+
+---
+
+# NEVER TRUST FRONTEND PAYMENT SUCCESS
+
+Always verify from backend.
+
+---
+
+# TABLES YOU NEED
+
+```txt
+payments
+transactions
+subscriptions
+invoices
+```
+
+---
+
+# PART 8 — FILE STORAGE SYSTEM
+
+---
+
+# Best Tool
+
+```txt
+Supabase Storage
+```
+
+Store:
+
+- profile pictures
+- PDFs
+- videos
+- receipts
+- documents
+
+---
+
+# STRUCTURE
+
+```txt
+avatars/
+products/
+receipts/
+course-materials/
+```
+
+---
+
+# PART 9 — ROLE-BASED ACCESS CONTROL
+
+---
+
+# Roles Example
+
+```txt
+admin
+staff
+student
+customer
+vendor
+```
+
+---
+
+# Example Logic
+
+```python
+if user.role != "admin":
+    raise PermissionDenied
+```
+
+---
+
+# PART 10 — API DESIGN BEST PRACTICES
+
+---
+
+# GOOD API STRUCTURE
+
+```txt
+/api/v1/users
+/api/v1/products
+/api/v1/orders
+```
+
+---
+
+# USE HTTP METHODS PROPERLY
+
+| Method | Purpose |
+|---|---|
+| GET | Fetch data |
+| POST | Create data |
+| PUT | Update |
+| DELETE | Remove |
+
+---
+
+# PART 11 — REAL-WORLD PROJECT SCHEMA
+
+---
+
+# Example — Ecommerce + Spa + Academy
+
+---
+
+# Tables Needed
+
+## Authentication
+
+```txt
+users
+sessions
+roles
+permissions
+```
+
+---
+
+## Ecommerce
+
+```txt
+products
+categories
+orders
+order_items
+payments
+reviews
+coupons
+```
+
+---
+
+## Spa Booking
+
+```txt
+services
+appointments
+therapists
+time_slots
+```
+
+---
+
+## Academy
+
+```txt
+courses
+lessons
+enrollments
+certificates
+```
+
+---
+
+## Notifications
+
+```txt
+emails
+sms
+notifications
+```
+
+---
+
+## Analytics
+
+```txt
+analytics_events
+activity_logs
+```
+
+---
+
+# PART 12 — BEST TOOLS FOR 2026
+
+---
+
+# Backend Framework
+
+## Best Choice
+
+```txt
+FastAPI
+```
+
+Why:
+
+- very fast
+- async support
+- modern
+- AI-friendly
+- automatic docs
+
+---
+
+# ORM
+
+## Best Choice
+
+```txt
+SQLAlchemy
+```
+
+---
+
+# Validation
+
+## Best Choice
+
+```txt
+Pydantic v2
+```
+
+---
+
+# Database
+
+## Best Choice
+
+```txt
+PostgreSQL
+```
+
+Managed by:
+
+```txt
+Supabase
+```
+
+---
+
+# Async Tasks
+
+## Best Choice
+
+```txt
+Celery + Redis
+```
+
+For:
+
+- emails
+- invoices
+- AI jobs
+- notifications
+
+---
+
+# Monitoring
+
+## Best Choice
+
+```txt
+Sentry
+```
+
+---
+
+# Deployment
+
+## Easy
+
+```txt
+Railway
+Render
+```
+
+## Advanced
+
+```txt
+Docker + VPS
+```
+
+---
+
+# PART 13 — COMPLETE LEARNING ROADMAP
+
+---
+
+# Beginner Level
+
+Build:
+
+- authentication API
+- blog API
+- student management system
+
+---
+
+# Intermediate Level
+
+Build:
+
+- ecommerce backend
+- booking backend
+- academy backend
+
+---
+
+# Advanced Level
+
+Build:
+
+- SaaS multi-tenant backend
+- AI automation backend
+- analytics platform
+
+---
+
+# FINAL RECOMMENDED ARCHITECTURE
+
+```txt
+Frontend:
+Next.js
+
+Backend:
+FastAPI
+
+Database:
+PostgreSQL (Supabase)
+
+ORM:
+SQLAlchemy
+
+Validation:
+Pydantic
+
+Auth:
+JWT
+
+Payments:
+Paystack
+
+Storage:
+Supabase Storage
+
+Deployment:
+Railway + Vercel
+```
+
+---
+
+# MOST IMPORTANT ADVICE
+
+Do NOT jump into coding immediately.
+
+First:
+
+1. Design schema
+2. Define relationships
+3. Define architecture
+4. Plan APIs
+5. Plan authentication
+6. Plan permissions
+
+THEN build.
+
+That single habit separates beginner developers from professional backend engineers.
+---
 
 ### Mini Projects
 - student management API
